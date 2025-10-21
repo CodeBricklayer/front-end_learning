@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var age = 20;
+        console.log(typeof (age)); //number
+
+        var name = "张三";
+        console.log(typeof (name)); //string
+
+        var learn = false;
+        console.log(typeof (learn)); //boolean
+
+        var user = {
+            name: "张三",
+            age: 20,
+            learn: true
+        }
+        console.log(typeof (user)); //object(可以返回object的有很多情况)
+        console.log(typeof []); //object
+
+        console.log(typeof null); //object
+        console.log(typeof undefined); //undefined
+
+        // null一般代表对象为“没有”
+        // undefined一般代表数值为“没有”
+    </script>
+</body>
+
+</html>

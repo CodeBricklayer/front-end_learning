@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var flag = false;
+        console.log(!flag); // true
+
+        /*
+            对于非布尔值，取反运算符会将其转为布尔值。可以这样记忆，以下六个值取反后为true，其他值都为false。
+            undefined
+            null
+            false
+            0
+            NaN
+            空字符串('')
+        */
+        //以下六个为true
+        console.log(!undefined);
+        console.log(!null);
+        console.log(!false);
+        console.log(!0);
+        console.log(!NaN);
+        console.log(!"");
+
+        // 以下为false
+        console.log(!100);
+        console.log(!"iwen");
+        console.log(!{ name: "iwen" });
+
+        // && 多个条件都要满足，任何一个条件不满足，都是false
+        console.log(10 < 20 && 10 > 5);// true
+
+        // || 满足一个条件即可，都不满足才是false
+        console.log(10 < 20 || 10 < 5);// true
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var day = 3;
+        switch (day) {
+            case 0:
+                console.log("今天星期一");
+                break;
+            case 1:
+                console.log("今天星期二");
+                break;
+            case 2:
+                console.log("今天星期三");
+                break;
+            case 3:
+                console.log("今天星期四");
+                break;
+            case 4:
+                console.log("今天星期五");
+                break;
+            case 5:
+                console.log("今天星期六");
+                break;
+            default:
+                console.log("今天星期日");
+        }
+
+        // 需要注意的是，每个case代码块内部的break语句不能少，否则会接下去执行下一个case代码块，而不是跳出switch结构。
+        var x = 1;
+        switch (x) {
+            case 1:
+                console.log("x=1");
+            case 2:
+                console.log("x=2");
+            case 3:
+                console.log("x=3");
+            default:
+                console.log("x值未知");
+        }
+    </script>
+</body>
+
+</html>

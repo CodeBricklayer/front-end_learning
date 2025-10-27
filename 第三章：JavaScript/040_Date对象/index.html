@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        console.log(Date.now());
+        // 1761550736525
+        var date = new Date(1761550736525)
+        console.log(date);
+        console.log(date.getDate());
+        console.log(date.getDay());
+        console.log(date.getYear());
+        console.log(date.getFullYear());
+        //月份从0~11
+        console.log(date.getMonth() + 1);
+        console.log(date.getHours());
+        console.log(date.getMilliseconds());
+        console.log(date.getMinutes());
+        console.log(date.getSeconds());
+
+        function leftDays() {
+            var today = new Date();
+            var endYear = new Date(today.getFullYear(), 11, 31, 23, 59, 59, 999);
+            var nanos = endYear.getTime() - today.getTime();
+            var msPerDay = 24 * 60 * 60 * 1000;
+            return Math.round(nanos / msPerDay);
+        }
+
+        console.log(leftDays());
+        
+    </script>
+</body>
+
+</html>

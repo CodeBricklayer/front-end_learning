@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var num = -100;
+        console.log(num);
+        console.log(Math.abs(num)); //100
+
+        console.log(Math.max(10, 20, 30, 56, 34));  //56
+        console.log(Math.min(10, 20, 30, 56, 34));  //10
+
+        //10.4
+        console.log(Math.floor(10.4)); //10 向下取整
+        console.log(Math.ceil(10.4)); //11 向上取整
+
+        //大于等于0 小于1
+        console.log(Math.random());
+
+        function getRandomArbitrary(min, max) {
+            return Math.floor(Math.random() * (max - min) + min);
+        }
+
+        console.log(getRandomArbitrary(5, 10));
+
+    </script>
+</body>
+
+</html>

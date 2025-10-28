@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .root {
+            width: 300px;
+            height: 300px;
+            background-color: red;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="root" id="root">
+        <div class="box" id="box"></div>
+    </div>
+    <script>
+        var root = document.getElementById("root");
+        var box = document.getElementById("box");
+
+        root.onclick = function (event) {
+            console.log("root");
+        } 
+
+        box.onclick = function (event) {
+            event.stopPropagation(); //阻止事件冒泡，即点击子元素，不会除非父级元素事件
+            console.log("box");
+        }
+    </script>
+</body>
+
+</html>

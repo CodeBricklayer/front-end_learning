@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #someDiv {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="someDiv"></div>
+
+    <script>
+        var div = document.getElementById("someDiv");
+        var opacity = 1;
+        var fader = setInterval(() => {
+            //透明度： opacity：取值范围0~1
+            opacity -= 0.05;
+            if (opacity > 0) {
+                div.style.opacity = opacity;
+            } else {
+                clearInterval(fader);
+            }
+        }, 60);
+    </script>
+</body>
+
+</html>

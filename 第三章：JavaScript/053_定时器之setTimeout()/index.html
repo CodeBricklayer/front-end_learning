@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var timer = setTimeout(function () {
+            console.log("大家好，3秒之后执行");
+        }, 3000);
+
+        //取消定时器
+        clearTimeout(timer);
+
+        var name = "baidu";
+        var user = {
+            name: "Tencent",
+            getName: function () {
+                //this永远指向当前调用者
+                console.log(this.name); // Tencent
+                
+                var that = this;
+                setTimeout(() => {
+                    console.log(this.name); //baidu
+                    console.log(that.name); //Tencent
+                }, 1000);
+            }
+        }
+        user.getName();
+    </script>
+</body>
+
+</html>

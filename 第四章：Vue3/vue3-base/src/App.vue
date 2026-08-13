@@ -10,6 +10,7 @@ import IfDemo from './components/IfDemo.vue'
 import ForDemo from './components/ForDemo.vue'
 import FormDemo from './components/FormDemo.vue'
 import WatchDemo from './components/WatchDemo.vue'
+import DomDemo from './components/DomDemo.vue'
 </script>
 
 <!-- 2.模板部分 -->
@@ -25,6 +26,7 @@ import WatchDemo from './components/WatchDemo.vue'
   <ForDemo />
   <FormDemo />
   <WatchDemo />
+  <DomDemo />
 </template>
 
 <!-- 3.样式部分 -->

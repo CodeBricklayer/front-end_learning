@@ -1,5 +1,5 @@
 <script setup>
-import { useTemplateRef,onMounted,ref } from 'vue'
+import { useTemplateRef, onMounted, ref } from 'vue'
 
 // vue3.5+ 模板引用：获取 DOM 元素的引用
 // const search = useTemplateRef('search')

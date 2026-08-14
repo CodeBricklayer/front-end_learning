@@ -13,6 +13,8 @@ import WatchDemo from './components/WatchDemo.vue'
 import DomDemo from './components/DomDemo.vue'
 import ComponentsDemo from './components/ComponentsDemo.vue'
 import ComponentsLifeDemo from './components/ComponentsLifeDemo.vue'
+import PropsDemo from './components/PropsDemo/Parent.vue'
+import CustomEventDemo from './components/CustomEventDemo/Parent.vue'
 </script>
 
 <!-- 2.模板部分 -->
@@ -31,6 +33,8 @@ import ComponentsLifeDemo from './components/ComponentsLifeDemo.vue'
   <DomDemo />
   <ComponentsDemo />
   <ComponentsLifeDemo />
+  <PropsDemo />
+  <CustomEventDemo />
 </template>
 
 <!-- 3.样式部分 -->

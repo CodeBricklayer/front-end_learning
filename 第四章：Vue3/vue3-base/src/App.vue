@@ -11,6 +11,8 @@ import ForDemo from './components/ForDemo.vue'
 import FormDemo from './components/FormDemo.vue'
 import WatchDemo from './components/WatchDemo.vue'
 import DomDemo from './components/DomDemo.vue'
+import ComponentsDemo from './components/ComponentsDemo.vue'
+import ComponentsLifeDemo from './components/ComponentsLifeDemo.vue'
 </script>
 
 <!-- 2.模板部分 -->
@@ -27,6 +29,8 @@ import DomDemo from './components/DomDemo.vue'
   <FormDemo />
   <WatchDemo />
   <DomDemo />
+  <ComponentsDemo />
+  <ComponentsLifeDemo />
 </template>
 
 <!-- 3.样式部分 -->

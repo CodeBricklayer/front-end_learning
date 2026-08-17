@@ -1,5 +1,6 @@
 <!-- 1.逻辑部分 -->
 <script setup>
+import { defineAsyncComponent } from 'vue'
 import Welcom from './components/Welcom.vue'
 import TemplateDemo from './components/TemplateDemo.vue'
 import RefDemo from './components/RefDemo.vue'
@@ -17,6 +18,28 @@ import PropsDemo from './components/PropsDemo/Parent.vue'
 import CustomEventDemo from './components/CustomEventDemo/Parent.vue'
 import ComponentsParentDemo from './components/ComponentsDemo/Parent.vue'
 import SlotDemo from './components/SlotDemo.vue'
+import Loading from './components/Loading.vue'
+import Error from './components/Error.vue'
+import Timeout from './components/Timeout.vue'
+import Default from './components/Default.vue'
+// import AsyncComponentDemo from './components/AsyncComponentDemo.vue'
+const AsyncComponent = defineAsyncComponent(() => import('./components/AsyncComponentDemo.vue'))
+// const AsyncComponent = defineAsyncComponent({
+//   // 异步组件的加载函数
+//   loader: () => import('./components/AsyncComponentDemo.vue'),
+//   // 异步组件的加载状态
+//   loading: Loading,
+//   // 异步组件的加载延迟时间
+//   delay: 2000,
+//   // 异步组件的错误状态
+//   error: Error,
+//   // 异步组件的超时状态
+//   timeout: Timeout,
+//   // 异步组件的超时时间
+//   timeout: 2000,
+//   // 异步组件的默认状态
+//   default: Default,
+//   })
 </script>
 
 <!-- 2.模板部分 -->
@@ -38,7 +61,7 @@ import SlotDemo from './components/SlotDemo.vue'
   <PropsDemo />
   <CustomEventDemo /> -->
   <!-- <ComponentsParentDemo /> -->
-  <SlotDemo>
+  <!-- <SlotDemo>
     <span>点击click me!</span>
     <template #main>
         <p>这是main槽位的内容</p>
@@ -46,8 +69,9 @@ import SlotDemo from './components/SlotDemo.vue'
     <template #footer>
         <p>这是footer槽位的内容</p>
     </template>
-  </SlotDemo>
-  <SlotDemo />
+  </SlotDemo> -->
+
+  <!-- <AsyncComponent /> -->
 </template>
 
 <!-- 3.样式部分 -->

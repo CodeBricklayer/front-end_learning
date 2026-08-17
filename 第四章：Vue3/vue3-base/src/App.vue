@@ -15,11 +15,12 @@ import ComponentsDemo from './components/ComponentsDemo.vue'
 import ComponentsLifeDemo from './components/ComponentsLifeDemo.vue'
 import PropsDemo from './components/PropsDemo/Parent.vue'
 import CustomEventDemo from './components/CustomEventDemo/Parent.vue'
+import ComponentsParentDemo from './components/ComponentsDemo/Parent.vue'
 </script>
 
 <!-- 2.模板部分 -->
 <template>
-  <h1>You did it!</h1>
+  <!-- <h1>You did it!</h1>
   <Welcom />
   <TemplateDemo />
   <RefDemo />
@@ -34,7 +35,8 @@ import CustomEventDemo from './components/CustomEventDemo/Parent.vue'
   <ComponentsDemo />
   <ComponentsLifeDemo />
   <PropsDemo />
-  <CustomEventDemo />
+  <CustomEventDemo /> -->
+  <ComponentsParentDemo />
 </template>
 
 <!-- 3.样式部分 -->

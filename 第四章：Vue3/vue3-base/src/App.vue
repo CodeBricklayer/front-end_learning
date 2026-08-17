@@ -16,6 +16,7 @@ import ComponentsLifeDemo from './components/ComponentsLifeDemo.vue'
 import PropsDemo from './components/PropsDemo/Parent.vue'
 import CustomEventDemo from './components/CustomEventDemo/Parent.vue'
 import ComponentsParentDemo from './components/ComponentsDemo/Parent.vue'
+import SlotDemo from './components/SlotDemo.vue'
 </script>
 
 <!-- 2.模板部分 -->
@@ -36,7 +37,10 @@ import ComponentsParentDemo from './components/ComponentsDemo/Parent.vue'
   <ComponentsLifeDemo />
   <PropsDemo />
   <CustomEventDemo /> -->
-  <ComponentsParentDemo />
+  <!-- <ComponentsParentDemo /> -->
+  <SlotDemo>
+    click me!
+  </SlotDemo>
 </template>
 
 <!-- 3.样式部分 -->

@@ -2,7 +2,13 @@
 </script>
 <template>
     <div class="box">
-        <slot></slot>
+        <slot>默认内容</slot>
+    </div>
+    <div class="main">
+        <slot name="main">默认内容</slot>
+    </div>
+    <div class="footer">
+        <slot name="footer">默认内容</slot>
     </div>
 </template>
 <style scoped>

@@ -39,8 +39,15 @@ import SlotDemo from './components/SlotDemo.vue'
   <CustomEventDemo /> -->
   <!-- <ComponentsParentDemo /> -->
   <SlotDemo>
-    click me!
+    <span>点击click me!</span>
+    <template #main>
+        <p>这是main槽位的内容</p>
+    </template>
+    <template #footer>
+        <p>这是footer槽位的内容</p>
+    </template>
   </SlotDemo>
+  <SlotDemo />
 </template>
 
 <!-- 3.样式部分 -->

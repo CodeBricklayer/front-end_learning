@@ -26,6 +26,15 @@ const router = createRouter({
       path: '/list',
       component: ListView,
       name: 'listView',
+      // 子路由守卫：在子路由切换前调用
+      beforeEnter: (to, from, next) => {
+        console.log("即将进入的路由", to, "即将离开的路由", from)
+        next()
+      },
+      // 子路由守卫：在子路由切换后调用
+      afterEnter: (to, from) => {
+        console.log("当前路由", to, "上一个路由", from)
+      },
       children: [
         {
           path: '/list/item1',
@@ -50,9 +59,26 @@ const router = createRouter({
       component: MyView,
       name: 'myView',
       // 别名
-      alias:'/mine'
+      alias: '/mine'
     }
   ],
+})
+
+// 导航守卫
+// 前置守卫：在路由切换前调用
+router.beforeEach((to, from, next) => {
+  console.log("即将进入的路由", to, "即将离开的路由", from)
+  // 检查是否登录
+  // if (to.name !== 'Login' && !isAuthenticated()) {
+  //   next({ name: 'Login' })
+  // } else {
+  //   next()
+  // }
+})
+
+// 后置守卫：在路由切换后调用
+router.afterEach((to, from) => {
+  console.log("当前路由", to, "上一个路由", from)
 })
 
 export default router

@@ -14,7 +14,9 @@ const router = createRouter({
     },
     {
       path: '/user/:name',
-      component: UserView
+      component: UserView,
+      // 具名路由
+      name: 'userView'
     },
     {
       path: '/list',

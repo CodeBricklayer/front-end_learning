@@ -38,10 +38,11 @@ const goReplace = () => {
 
 <template>
   <ul>
-    <li><router-link to="/">首页</router-link></li>
+    <!-- 自定义激活状态类名 -->
+    <li><router-link active-class="active" exact-active-class="exact-active" to="/">首页</router-link></li>
     <!-- 静态路由参数 -->
-    <li><router-link to="/user/baidu">去百度用户</router-link></li>
-    <li><router-link to="/list">去列表页</router-link></li>
+    <li><router-link active-class="active" exact-active-class="exact-active" to="/user/baidu">去百度用户</router-link></li>
+    <li><router-link active-class="active" exact-active-class="exact-active" to="/list">去列表页</router-link></li>
   </ul>
 
   <ul>
@@ -63,4 +64,21 @@ const goReplace = () => {
   <router-view></router-view>
 </template>
 
-<style scoped></style>
+<style>
+/* 激活状态 */
+.router-link-active {
+  color: red;
+}
+
+.router-link-exact-active {
+  color: green;
+}
+
+.active {
+  color: orange;
+}
+
+.exact-active {
+  color: pink;
+}
+</style>

@@ -8,6 +8,9 @@ import MyView from '@/pages/MyView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
+  // 自定义激活状态类名
+  linkActiveClass: 'active',
+  linkExactActiveClass: 'exact-active',
   routes: [
     {
       path: '/',

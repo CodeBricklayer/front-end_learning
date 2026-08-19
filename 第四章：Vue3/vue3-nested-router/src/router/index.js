@@ -4,6 +4,7 @@ import UserView from '@/pages/UserView.vue'
 import ListView from '@/pages/ListView.vue'
 import Item1 from '@/pages/ListSub/Item1.vue'
 import Item2 from '@/pages/ListSub/Item2.vue'
+import MyView from '@/pages/MyView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -21,6 +22,7 @@ const router = createRouter({
     {
       path: '/list',
       component: ListView,
+      name: 'listView',
       children: [
         {
           path: '/list/item1',
@@ -31,6 +33,21 @@ const router = createRouter({
           component: Item2
         }
       ]
+    },
+    {
+      path: '/hello',
+      // 重定向
+      // redirect: '/list'
+      redirect: {
+        name: 'listView'
+      }
+    },
+    {
+      path: '/my',
+      component: MyView,
+      name: 'myView',
+      // 别名
+      alias:'/mine'
     }
   ],
 })

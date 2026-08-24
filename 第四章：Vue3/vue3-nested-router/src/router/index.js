@@ -83,6 +83,26 @@ const router = createRouter({
       component: LoginView
     }
   ],
+  scrollBehavior(to, from, savedPosition) {
+    // 登录页滚动到指定位置 100px
+    // if (to.path === '/login') {
+    //   return { top: 100 }
+    // }
+
+    // 如果有保存的位置，就滚动到保存的位置. 如果没有保存的位置，就滚动到顶部
+    // if (savedPosition) {
+    //   return savedPosition
+    // } else {
+    //   return { top: 0, left: 0 }
+    // }
+
+    // 模拟异步滚动行为，例如等待服务器响应, 等待2秒后滚动到保存的位置, 如果没有保存的位置，就滚动到顶部
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve(savedPosition || { top: 0, left: 0 })
+      }, 2000)
+    })
+  }
 })
 
 // 导航守卫

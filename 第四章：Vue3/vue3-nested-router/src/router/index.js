@@ -5,6 +5,7 @@ import ListView from '@/pages/ListView.vue'
 import Item1 from '@/pages/ListSub/Item1.vue'
 import Item2 from '@/pages/ListSub/Item2.vue'
 import MyView from '@/pages/MyView.vue'
+import LoginView from '@/pages/LoginView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -14,18 +15,33 @@ const router = createRouter({
   routes: [
     {
       path: '/',
-      component: HomeView
+      component: HomeView,
+      meta: {
+        // 自定义路由元信息
+        // requiredAuth: true 表示需要登录才能访问
+        requiredAuth: false
+      }
     },
     {
       path: '/user/:name',
       component: UserView,
       // 具名路由
-      name: 'userView'
+      name: 'userView',
+      meta: {
+        // 自定义路由元信息
+        // requiredAuth: true 表示需要登录才能访问
+        requiredAuth: true
+      }
     },
     {
       path: '/list',
       component: ListView,
       name: 'listView',
+      meta: {
+        // 自定义路由元信息
+        // requiredAuth: true 表示需要登录才能访问
+        requiredAuth: true
+      },
       // 子路由守卫：在子路由切换前调用
       beforeEnter: (to, from, next) => {
         console.log("即将进入的路由", to, "即将离开的路由", from)
@@ -37,11 +53,12 @@ const router = createRouter({
       },
       children: [
         {
-          path: '/list/item1',
+          // 子路由 path 写相对路径（不写 /），最终路径会自动拼接为 /list/item1
+          path: 'item1',
           component: Item1
         },
         {
-          path: '/list/item2',
+          path: 'item2',
           component: Item2
         }
       ]
@@ -60,6 +77,10 @@ const router = createRouter({
       name: 'myView',
       // 别名
       alias: '/mine'
+    },
+    {
+      path: '/login',
+      component: LoginView
     }
   ],
 })
@@ -74,6 +95,8 @@ router.beforeEach((to, from, next) => {
   // } else {
   //   next()
   // }
+  // 必须显式调用 next() 才能放行路由，否则跳转将被挂起
+  next()
 })
 
 // 后置守卫：在路由切换后调用

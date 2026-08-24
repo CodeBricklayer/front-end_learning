@@ -1,9 +1,11 @@
 <script setup>
 import { ref, getCurrentInstance } from 'vue'
 import { useCounterStore } from '@/stores/counter'
+import { useLoginStore } from '@/stores/login'
 
 // 引入pinia状态
 const counter = useCounterStore()
+const login = useLoginStore()
 
 // 增加pinia状态,触发响应式更新
 const updateCounter = () => {
@@ -17,6 +19,10 @@ const changeMessage = () => {
     instance.appContext.config.globalProperties.$message = 'hello vue3'
     console.log(instance.appContext.config.globalProperties.$message)
 }
+
+const loginHandle = () => {
+    login.login()
+}
 </script>
 <template>
     <div>
@@ -29,7 +35,8 @@ const changeMessage = () => {
         <p>
             pinia状态：{{ counter.count }}
         </p>
-        <button @click="updateCounter">增加</button>
+        <button @click="updateCounter">增加</button>  
+        <button @click="loginHandle">登录</button>
     </div>
 </template>
 <style scoped></style>

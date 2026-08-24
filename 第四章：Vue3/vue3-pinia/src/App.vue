@@ -7,6 +7,7 @@
   <ul>
     <li><router-link to="/">首页</router-link></li>
     <li><router-link to="/about">关于</router-link></li>
+    <li><router-link to="/mine">用户中心</router-link></li>
   </ul>
   <router-view></router-view>
 </template>

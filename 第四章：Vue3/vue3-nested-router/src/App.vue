@@ -44,6 +44,8 @@ const goReplace = () => {
     <li><router-link active-class="active" exact-active-class="exact-active" to="/user/baidu">去百度用户</router-link></li>
     <li><router-link active-class="active" exact-active-class="exact-active" to="/list">去列表页</router-link></li>
     <li><router-link active-class="active" exact-active-class="exact-active" to="/login">去登录页</router-link></li>
+    <!-- 别名 -->
+    <li><router-link active-class="active" exact-active-class="exact-active" to="/mine">去我的页</router-link></li>
   </ul>
 
   <ul>

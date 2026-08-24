@@ -1,11 +1,16 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '@/pages/HomeView.vue'
-import UserView from '@/pages/UserView.vue'
-import ListView from '@/pages/ListView.vue'
+// import UserView from '@/pages/UserView.vue'
+// import ListView from '@/pages/ListView.vue'
 import Item1 from '@/pages/ListSub/Item1.vue'
 import Item2 from '@/pages/ListSub/Item2.vue'
-import MyView from '@/pages/MyView.vue'
+// import MyView from '@/pages/MyView.vue'
 import LoginView from '@/pages/LoginView.vue'
+
+// 懒加载组件
+const UserView = () => import('@/pages/UserView.vue')
+const ListView = () => import('@/pages/ListView.vue')
+
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -73,7 +78,9 @@ const router = createRouter({
     },
     {
       path: '/my',
-      component: MyView,
+      // component: MyView,
+      // 懒加载组件
+      component: () => import('@/pages/MyView.vue'),
       name: 'myView',
       // 别名
       alias: '/mine'
